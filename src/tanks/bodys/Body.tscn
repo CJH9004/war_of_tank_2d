@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 39, 41.5 )
+
+[node name="Body" type="KinematicBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="FrontLeft" type="Position2D" parent="."]
+position = Vector2( 39, -41 )
+
+[node name="FrontRight" type="Position2D" parent="."]
+position = Vector2( 39, 41 )
+
+[node name="BackLeft" type="Position2D" parent="."]
+position = Vector2( -39, -41 )
+
+[node name="BackRight" type="Position2D" parent="."]
+position = Vector2( -39, 41 )

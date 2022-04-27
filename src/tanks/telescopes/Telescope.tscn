@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://tanks/telescopes/Telescope.gd" type="Script" id=1]
+
+[node name="Telescope" type="RayCast2D"]
+cast_to = Vector2( 50, 0 )
+script = ExtResource( 1 )
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PoolVector2Array( 0, 0, 50, 0 )
+width = 2.0
+default_color = Color( 0, 1, 0, 0.501961 )

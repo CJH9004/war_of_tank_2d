@@ -1,0 +1,23 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://asstes/Smoke/smokeOrange1.png" type="Texture" id=1]
+[ext_resource path="res://asstes/Smoke/smokeOrange0.png" type="Texture" id=2]
+[ext_resource path="res://asstes/Smoke/smokeOrange4.png" type="Texture" id=3]
+[ext_resource path="res://asstes/Smoke/smokeOrange5.png" type="Texture" id=4]
+[ext_resource path="res://asstes/Smoke/smokeOrange2.png" type="Texture" id=5]
+[ext_resource path="res://asstes/Smoke/smokeOrange3.png" type="Texture" id=6]
+[ext_resource path="res://smokes/Smoke.gd" type="Script" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 1 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": false,
+"name": "default",
+"speed": 10.0
+} ]
+
+[node name="SmokeOrange" type="AnimatedSprite"]
+frames = SubResource( 1 )
+script = ExtResource( 7 )
+
+[connection signal="animation_finished" from="." to="." method="_on_Smoke_animation_finished"]

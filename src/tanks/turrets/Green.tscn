@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://asstes/Tanks/barrelGreen_outline.png" type="Texture" id=1]
+[ext_resource path="res://tanks/turrets/Turret.tscn" type="PackedScene" id=2]
+
+[node name="Green" instance=ExtResource( 2 )]
+
+[node name="Sprite" type="Sprite" parent="." index="1"]
+position = Vector2( 18, 0 )
+rotation = 1.5708
+texture = ExtResource( 1 )

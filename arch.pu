@@ -1,0 +1,36 @@
+@startuml arch
+
+class Map
+class MapType1
+Map --> MapType1
+class Tank
+class TankType1
+Tank --> TankType1
+class Control
+class KeyBoardControl
+class AIControl
+Control --> KeyBoardControl
+Control --> AIControl
+class Obstacle
+class ObstacleType1
+Obstacle --> ObstacleType1
+class Bullet
+class BulletType1
+Bullet --> BulletType1
+class Player
+Player --* Tank
+Player --* KeyBoardControl
+Enemy --* Tank
+Enemy --* AIControl
+Tank --* Bullet
+Map --* Player
+Map --* Enemy
+Map --* Obstacle
+class HitShape
+class TakeHit
+Tank --* TakeHit
+Obstacle --* TakeHit
+Bullet --* HitShape
+' class VisionShape
+
+@enduml

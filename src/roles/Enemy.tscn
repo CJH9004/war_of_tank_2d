@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://tanks/RedGreen.tscn" type="PackedScene" id=1]
+[ext_resource path="res://roles/Enemy.gd" type="Script" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+
+[node name="Enemy" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+gun_cool_down = 3.0
+
+[node name="Vision" type="Area2D" parent="." index="8"]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vision" index="0"]
+shape = SubResource( 1 )
+
+[connection signal="body_entered" from="Vision" to="." method="_on_Vision_body_entered"]
+[connection signal="body_exited" from="Vision" to="." method="_on_Vision_body_exited"]
